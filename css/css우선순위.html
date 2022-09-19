@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 우선순위</title>
+</head>
+<style>
+  /* 클래스10점 */
+  .box{
+    color: #333;
+  }
+  /* 선택자1점 */
+  div{
+    color: #f00;
+  }
+  div{
+    color: #0f0;
+  }
+</style>
+<body>
+  <div class="box">
+    <ul>
+      <li>태그1</li>
+      <li>클래스10</li>
+      <li>아이디100</li>
+    </ul>
+    <ul>
+      <li>인라인1000</li>
+      <li>내용</li>
+      <li>내용</li>
+    </ul>
+  </div>
+</body>
+</html>
