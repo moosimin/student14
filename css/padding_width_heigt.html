@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>padding_width_heigt</title>
+  <style>
+    *{margin:0;padding: 0;}
+    .wrap{
+      width: 1190px; /* 부모에게 너비지정 */
+      margin: 0  auto;/* 블럭레벨의 가운데  정렬 */
+    }
+    section {
+      /* padding: 50px 100px; */
+      padding: 2rem; /* 바디에  지정된  글자크기의 2배*/
+      border: 10px dashed #000;
+      border-left: 0;
+      border-right:0;
+      /* margin: 2rem  0; */
+
+    }
+    .section1{
+      background-color: orange;
+    }
+    .section2{
+      background-color: blue;
+    }
+    .section3{
+      background-color: green;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+      <div class="slide">
+      슬라이더영역
+    </div>
+    <!-- section.section$>*3>h1>{section$^p>lorem} -->
+    <section class="section1">
+      <h1>section1</h1>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio eligendi, laboriosam accusantium officia reiciendis quae dolor fuga quaerat et nemo illo. Distinctio, neque cupiditate minus minima perspiciatis reprehenderit quos nihil.</p>
+    </section>
+    <section class="section2">
+      <h1>section2</h1>
+      <p>Facilis ducimus ipsum optio deserunt accusamus aperiam in, est unde magni! In magnam blanditiis sed? At quae autem provident nulla libero esse quaerat, vitae, eligendi a voluptates ex, repellendus natus!</p>
+    </section>
+    <section class="section3">
+      <h1>section3</h1>
+      <p>Est voluptas voluptate molestiae ipsum ratione, quod sapiente? Quis soluta modi laborum sint perspiciatis magni totam ad eaque fuga explicabo praesentium voluptates reprehenderit impedit, laudantium natus odio deleniti beatae provident?</p>
+    </section>
+    <div class="notice">
+      공지사항
+    </div>
+    </div><!-- //.wrap -->
+</body>
+</html>
