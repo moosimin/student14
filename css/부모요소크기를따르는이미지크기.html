@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>부모요소를 크기를 따르는 이미지크기</title>
+  <style>
+     *{margin:0;padding:0}
+    .wrap{
+      width: 80%;
+      margin:0 auto;
+      background-color: #ccc;
+    }
+    .img-wrap{
+      width: 50%;
+      min-width:200px;
+      max-width:600px;
+      /* 테스트 
+      border: 1px solid ;
+      background-color: red;
+      margin: 50px 0;*/
+    }
+    /* .img-wrap의 후손 img */
+    .img-wrap img{
+      /* img태그를 블럭레벨수준으로  변경 */
+      display: block;
+      width: 100%; /* 부모의 컨텐츠 영역 */
+      /*  max-width: 100%; 원래 이미지 크기 이상 키우지말라*/
+       /*height: auto;  기본오토이므로 높이를 지정하지마라*/
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="img-wrap ex1"><img src="../assets/images/cherryblossom.jpg" alt="test1"></div>
+    <div class="img-wrap ex2"><img src="../assets/images/cherryblossom.jpg" alt="test2"></div>
+    <div class="img-wrap ex3"><img src="../assets/images/cherryblossom.jpg" alt="test3"></div> 
+  </div> <!--//.wrap-->
+</body>
+</html>
