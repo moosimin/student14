@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다중배경</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .wrap{
+      height:300px;
+      background-image: url(images/flower.png), url(images/field2.png), url(images/sun.png);
+      background-position: left bottom, left bottom, right 50px;
+      background-size:20% auto, 400px auto, 100px auto;
+      background-repeat:space no-repeat, repeat-x, no-repeat;
+    }
+    </style>
+</head>
+<body>
+  <div class="wrap"></div>
+</body>
+</html>
