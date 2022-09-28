@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>트랜스폼</title>
+</head>
+<style>
+/* 리셋 */
+   *{margin:0;padding:0;}
+.section{
+  position: relative;
+/* 섹션이 브라우저 꽉차게 */
+width: 100vw;
+height: 100vh;
+/* background-image: url(background/images/bg.jpg);
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover; */
+background:url(background/images/bg.jpg) no-repeat center/cover;
+}
+.section .slogan{
+  top:50%;
+  left:50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  padding:25px 50px;
+  background-color:rgba(0,0,0,0.2);  
+}
+.section .slogan span{
+  color: #fff;
+  display: block;
+  text-align: center;
+  }
+.section .slogan .title{
+  font-size: 100px;
+  text-shadow:2px 2px 5px rgba(218, 66, 66, 0.4);
+}
+.section .slogan .desc{
+  font-size: 28px;
+  }
+</style>
+<body>
+  <div class="section">
+    <div class="slogan">
+      <span class="title">Tilte Tilte</span>
+      <span class="desc">Lorem ipsum dolor sit amet.</span>
+    </div>
+  </div>
+</body>
+</html>
