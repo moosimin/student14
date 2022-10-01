@@ -26,8 +26,11 @@
     }
 
     .navigation{
-      width:100%;
-
+      /* width:100%; 고로 넣지마라*/
+      /* width/height가 지정되어 있으면 width/height를 따르고
+      width/height도 basis(auto)도없을 경우 플렉스 아이템이 자식크기만큼
+      */
+      flex-basis: auto;
     }
     .navigation> ul{
       display: flex;
