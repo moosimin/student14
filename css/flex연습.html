@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex연습</title>
+  <style>
+*{margin: 0;padding: 0;}
+.wrap{
+  /* background-color: #ccc; */
+  margin: 50px;
+  padding: 1rem;
+}
+.parent{
+  max-width:1190px ;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  /* 플렉스 아이템이 넘치면 줄바꿈여부결정
+  flex-wrap: nowrap :기본값(안함);
+   */
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  box-sizing: border-box;
+  /* background-color: #999; */
+}
+
+.parent .item{
+  /* 공간에 확장
+  0:늘지마 1:확장 */
+  flex-grow: 0;
+  /* 공간에 맞게 축소
+  1:기본값 0:줄지마라 */
+  flex-shrink: 0;
+  /* width: 25%; 4단 */
+  width: 33.333%;
+  
+  padding: 1rem;
+  /* border: solid 1px #000; */
+  box-sizing: border-box;
+  /* background-color: #666; */
+}
+.parent .item .inner{
+  background-color: #ef8;
+  height: 300px;
+  box-sizing: border-box;
+}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="parent">
+      <div class="item item1">
+        <div class="inner">item1</div>
+      </div>
+      <div class="item item2">
+        <div class="inner">item2</div>
+      </div>
+      <div class="item item3">
+        <div class="inner">item3</div>
+      </div>
+      <div class="item item4">
+        <div class="inner">item4</div>
+      </div>
+      <div class="item item5">
+        <div class="inner">item5</div>
+      </div>
+      <div class="item item6">
+        <div class="inner">item6</div>
+      </div>
+      <div class="item item7">
+        <div class="inner">item7</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

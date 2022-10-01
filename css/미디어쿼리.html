@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어쿼리</title>
+</head>
+<style>
+   /* 리셋 */
+   *{margin:0;padding:0;}
+   body{
+    background-color: #ccc;
+    color:#000
+   }
+   .container{
+    display: flex;
+    /* 기본값아래들 */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: 0;
+    flex-shrink: 1;
+    /* 여기까지 기본값 */
+    width: 80%;
+    min-width: 960px;
+    max-width: 1400px;
+    margin: 0 auto;
+   }
+   .container .box{
+   flex-basis: 50%;
+   height: 300px;
+   }
+   .container .box1{
+    background-color: #ef8;
+   }
+   .container .box2{
+    background-color: #f8e;
+   }
+   @media(max-width:960px){
+   body{background-color: #fff;
+   color:#f00;}
+   .container{min-width: none;max-width:none;
+   width: 95%;flex-wrap:wrap;}
+   .container .box{flex-basis: 100%;}
+   }
+</style>
+<body>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, numquam accusamus aut quasi maxime veritatis dolorum illum minus sit praesentium itaque dolorem quibusdam quo modi molestias fuga perferendis! Optio, fuga?</p>
+<div class="container">
+  <div class="box box1">box</div>
+  <div class="box box2">box</div>
+</div>
+</body>
+</html>
