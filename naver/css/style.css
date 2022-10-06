@@ -202,21 +202,121 @@ html {
   font-style: normal;
   line-height: 1.4;
   -webkit-text-size-adjust: none;
+  background-color: #ccc;
+}
+/* 변수선언 */
+body{
+  --naver-color:#1ec545;
+  --header-height:80px;
 }
 /* 레이아웃 */
+header{
+  /* background-color: #f8e; */
+  position: relative;
+  height:var(--header-height);
+  background-color: rgba(255,255,255,0.7);
+  }
 
-/* header */
-header{margin: 50px;}
+.header_wrap{
+display: flex;
+justify-content: space-between;
+align-items: center;
+/* background-color: #ef8; */
+margin: 0 auto;
+max-width: 1600px;
+}
+
+/* 헤더 */
 .header_logo{
   background:url(../img/header_logo.png) center  no-repeat;
   width: 87px;
   height: 17px;
   background-size:contain;
+  background-color: #ccc;
 }
 
 .header_logo a{
-display: block;
-width: 100%;
-height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.header_logo a span{}
+
+/* 네비게이션 */
+nav{
+  /* background-color: #ccc; */
+}
+nav .gnb_menu{
+  display: flex;
+}
+nav .gnb_menu_list{}
+nav .gnb_menu_list a.gnb_menu_item{
+  display: block;
+  margin: 0 30px;
+  height: var(--header-height);
+  padding-top: 25px;
+  font-size: 18px;
+  color:#000;
+  position:relative;
+}
+nav .gnb_menu_list a.gnb_menu_item:after{
+content: '';
+display: block;
+position: absolute;
+left:0px;bottom:20px;
+width: calc(100% + 3px); /* 계산기 함수 */
+height: 2px;
+background-color:var(--naver-color);
+transform: scale(0);
+}
+nav .gnb_menu_list:hover a.gnb_menu_item:after,.nav gnb_menu_list a.gnb_menu_item:focus:after{
+ transform: scale(1);
+ transition: transform 0.5s;
+ transform-origin: 0 0;
+}
+/* 모든 서브메뉴 */
+nav .gnb_menu_list .gnb_dropMenu_wrap{
+  position: absolute;
+  left:0px;top:var(--header-height);
+  width:100%;
+  background-color:var(--naver-color);
+  display: flex;
+  justify-content: center;
+  display: none; /*테스트후 삭제*/
+}
+/* 대메뉴 depth1 의 첫번째 메뉴 하나식 보이게
+nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap{
+  display: flex; /* 서브작업후삭제 
+}*/
+
+nav .gnb_menu_list:hover .gnb_dropMenu_wrap{
+  display: flex;
+}
+.gnb_dropMenu_wrap > li{
+  width: 190px;
+  height: 340px;
+  border-left:solid 1px #4bd16a;
+  padding-top: 1.5rem; /*내려온 높이*/
+  padding-left:1.5rem;
+}
+.gnb_dropMenu_wrap > li:last-child{
+  border-right:solid 1px #4bd16a;
+}
+.gnb_dropMenu_wrap .gnb_dropMenu{
+  /* background-color: #ccc; */
+  
+}
+.gnb_dropMenu li{
+  padding: 0.2rem 0;
+}
+.gnb_dropMenu li.depth-blank{
+  margin-bottom: 1rem;
+
+}
+.gnb_dropMenu li .gnb_dropMenu_item{
+  color:#fff;
+}
+
+/* 유틸 */
+.header_util{
+  background-color: #999;
+}

@@ -12,24 +12,28 @@
       padding: 0;
       box-sizing: border-box;
     }
-
-    /* .wrap {
-      margin: 50px;
-    } */
     ul,
     ol,
     li {
       list-style: none;
     }
+/* 공통 변수속성 사용*/
+    :root{
+      --header-height:150px;
+      --section-max-width:1200px;
+    }
+
     header{background-color: #f8e;
-    position: relative;}
+    position: relative;
+    height:var(--header-height);
+  }
     header .header_wrap{
       display: flex;
       justify-content: space-between;
       align-items: center;
       background-color: #fe8;
       width: 90%;
-      max-width: 1200px;
+      max-width: var(--section-max-width);
       margin: 0 auto;
     }
     header .header_wrap .logo{
@@ -45,32 +49,55 @@
     
     nav {
       background-color: #ccc;
-      padding: 1rem;
+      /* padding: 1rem; */
       /* position: relative; */
     }
 
     .nav-wrap {
-      padding: 1rem;
+      /* padding: 1rem; */
       background-color: #999;
     }
 
     .nav-wrap>ul {
       /* 플렉스 컨테이너 */
       display: flex;
-      padding: 1rem;
-      justify-content: center;      
+      /* padding: 1rem; */
+      justify-content: center;   
       background-color: #666;
     }
 
     .nav-wrap li.d1 {
       background-color: #333;
       /* line-height: 1.4rem; */
+      padding:0rem 1.5rem;
+      line-height:var(--header-height);
+
     }
 
     .nav-wrap .d2 {
       position: absolute;
       left: 0px;
-      top: 0px;
+      top:var(--header-height);
+      border: 1px solid #f00;
+      background-color: #ccc;
+      width: 100%;
+      display: none;
+      line-height: 1.5;
+    }
+    .nav-wrap .d1:hover .d2{
+      display: block;
+    }
+    .nav-wrap .d2 ul{
+      max-width: var(--section-max-width);
+      width: 90%;
+      margin: 0 auto;
+      background-color: #999;
+      display: flex;
+      justify-content: center;
+
+    }
+    .nav-wrap .d2 ul li{
+      padding:1rem 1.5rem;
     }
   </style>
 </head>
@@ -89,9 +116,9 @@
                 menu1
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub11</li>
+                    <li class="sub2">sub12</li>
+                    <li class="sub3">sub13</li>
                   </ul>
                 </div>
               </li>
@@ -99,9 +126,9 @@
                 menu2
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub21</li>
+                    <li class="sub2">sub22</li>
+                    <li class="sub3">sub23</li>
                   </ul>
                 </div>
               </li>
@@ -109,9 +136,9 @@
                 menu3
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub31</li>
+                    <li class="sub2">sub32</li>
+                    <li class="sub3">sub33</li>
                   </ul>
                 </div>
               </li>
@@ -119,9 +146,9 @@
                 menu4
                 <div class="d2">
                   <ul>
-                    <li class="sub1">sub1</li>
-                    <li class="sub2">sub2</li>
-                    <li class="sub3">sub3</li>
+                    <li class="sub1">sub41</li>
+                    <li class="sub2">sub42</li>
+                    <li class="sub3">sub43</li>
                   </ul>
                 </div>
               </li>
