@@ -318,5 +318,58 @@ nav .gnb_menu_list:hover .gnb_dropMenu_wrap{
 
 /* 유틸 */
 .header_util{
-  background-color: #999;
+  
+  display: flex;
+ }
+.header_util .header_lang{}
+
+.header_lang a{
+  font-size: 0.8rem;
+  color:#000;
+}
+/* 속성특성자 :사용자정의속성 */
+.header_lang a[aria-selected="false"]{opacity: 0.5;}
+
+.header_lang a:first-child{
+  position: relative;
+  margin-right:20px;
+
+}
+.header_lang a:first-child:after{
+content: '';
+display: block;
+position: absolute;
+top:0;left: 36px;
+width: 2px;
+height: 100%;
+background-color: #000;
+}
+.header_util .sitemap_box{
+  width: 24px;
+  height: 24px;
+  margin-left: 2rem;
+  }
+
+.sitemap_box .btn_sitemap{
+  width: 100%;
+  height:100%;
+  position: relative; /* 햄버거메뉴의 span의 기준요소가 되려고 */
+  
+}
+.sitemap_box .btn_sitemap .btn_line{
+  display: block;
+  position: absolute;
+  right:0;
+  /*width: 100%;*/
+  height: 2.5px;
+  background-color: #000;
+}
+.sitemap_box .btn_sitemap span:nth-of-type(2){
+  top:0px;width:calc(100% - 5px);
+}
+.sitemap_box .btn_sitemap span:nth-of-type(3){
+  top:9px;width:calc(100% - 8px);
+}
+.sitemap_box .btn_sitemap span:nth-of-type(4){
+  top:19px;width: 100%;
 }
