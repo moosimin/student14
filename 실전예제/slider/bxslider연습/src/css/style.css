@@ -8,7 +8,12 @@ ul,ol,li{
   list-style: none;
 }
 
-/* 슬라이더 */
+.box-wrap{
+  /* width: 800px; */
+  width: 100%;
+  margin: 0 auto;
+}
+/* 슬라이더가 될 부모에게 */
 .visual{
   width: 100%;
   border: 2px solid #f00;

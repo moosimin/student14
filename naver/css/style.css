@@ -282,6 +282,7 @@ nav .gnb_menu_list .gnb_dropMenu_wrap{
   display: flex;
   justify-content: center;
   display: none; /*테스트후 삭제*/
+  z-index:10000;
 }
 /* 대메뉴 depth1 의 첫번째 메뉴 하나식 보이게
 nav .gnb_menu_list:nth-of-type(5) .gnb_dropMenu_wrap{
@@ -372,4 +373,88 @@ background-color: #000;
 }
 .sitemap_box .btn_sitemap span:nth-of-type(4){
   top:19px;width: 100%;
+}
+/* 슬라이더*/
+.container{
+  /* width: 800px; */
+  width: 100%;
+  margin: 0 auto;
+}
+/* 슬라이더가 될 부모에게 */
+.main_slide{
+  width: 100%;
+}
+.main_slide div{
+  width: 100%;
+}
+.main_slide div img{
+  width: 100%;
+  height: auto;
+}
+
+/* 플러그인 bxslider 이미지로
+.bx-wrapper .bx-controls-direction a{
+  width: 46px;
+  height: 46px;
+}
+.bx-wrapper .bx-prev{
+  background:url(../img/sprite.png) -296px -99px no-repeat;
+background-size: 474px 1500px;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus{
+  background-position:-296px -99px ;
+}*/
+
+/* 플러그인 bxslider 좌우버튼*/
+.bx-wrapper{
+  overflow: hidden;
+}
+.bx-wrapper .bx-prev{
+  background-image: none;
+  border-left:1px solid #fff;
+  border-top:1px solid #fff;
+  transform: rotate(-45deg); translate:(0,-50%);
+  transform-origin:0 0;
+  left:25px;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev:focus{
+  background-image: none;
+}
+
+.bx-wrapper .bx-next{
+  background-image: none;
+  border-left:2px solid #fff;
+  border-top:2px solid #fff;
+  transform: rotate(135deg); translate:(0,50%);
+  transform-origin:0 0;
+  right:0px;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus{
+  background-image: none;
+}
+/* pagination pager변경 */
+.bx-wrapper .bx-pager, .bx-wrapper .bx-controls-auto{
+bottom:30px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a{
+  width: 24px;
+  height: 4px;
+  border:0 none;
+  border-radius: 0;
+}
+
+/* swiper */
+.swiper{}
+.swiper .swiper-wrapper{}
+.swiper .swiper-wrapper .swiper-slide{}
+.swiper-slide img{
+  height: auto;
+  width: 100%; /* 부모의 크기에 맞게 이미지 조정 */
+  /* max-width: 100%; 원래 이미지크기 이상되지 마라 */
+}
+.swiper-button-next,.swiper-button-prev{
+  color:var(--naver-color);
 }
