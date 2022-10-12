@@ -457,4 +457,18 @@ bottom:30px;
 }
 .swiper-button-next,.swiper-button-prev{
   color:var(--naver-color);
+  opacity: 0.6;
+}
+.swiper-button-next:hover,.swiper-button-prev:hover{
+  color:var(--naver-color);
+  opacity: 1;
+  transition: 0.2s;
+}
+.swiper-pagination-bullet{
+ background-color:var(--naver-color);
+ width:40px;heigt:10px;
+ border-radius: 0;
+}
+.swiper-pagination-bullet:active{
+width: 60px;
 }
