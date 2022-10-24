@@ -685,7 +685,7 @@ background-size: 474px 1500px;
 
 /* content_service */
 .content_service{
- 
+ margin-top: 150px;
 }
 .content_service .service_list_container{
   display: flex;
@@ -699,8 +699,6 @@ background-size: 474px 1500px;
   /* 플레스 아이템의 후손 크기가 플렉스 아이템보다 클경우 생각해서 width(flex-deirection:row_로지정, height(flex-deirection:column_로지정 */
   width: 33.333%;
   box-sizing: border-box;
-  background-color: #ccc;
-  border: #f00 1px solid;
   overflow: hidden;
 }
 li.service_thumbnail_box a.thumbnail_dimmed{
@@ -708,7 +706,22 @@ li.service_thumbnail_box a.thumbnail_dimmed{
   color:#fff;
   width: 100%;
 }
-li.service_thumbnail_box .thumbnail img{}
+/* 가변이미지 */
+li.service_thumbnail_box .thumbnail{
+width:100%;
+/* li.service_thumbnail_box마우스 아웃 상태일때 */
+transform: scale(1);
+transition: all 0.5s;
+}
+li.service_thumbnail_box .thumbnail img{
+/*max-width: 100%;원본보다 커지지마라*/
+width: 100%;/*이미지를 감싸고 있는 요소의 크기를 따라라*/
+height: auto;/*기본값이라 안써도 된다+이미지 너비에 맞게 높이는 자동(기존비율유지)*/
+}
+li.service_thumbnail_box:hover .thumbnail{
+  transform: scale(1.2);
+}
+
 li.service_thumbnail_box .description{
   position: absolute;
   bottom:-300px;left:0px;
@@ -721,6 +734,7 @@ li.service_thumbnail_box .description{
 }
 li.service_thumbnail_box:hover .description{
   bottom:0px;
+  z-index: 20;
 }
 
 li.service_thumbnail_box .description:after{
@@ -741,3 +755,18 @@ text-overflow:ellipsis;
 white-space: nowrap;
 }
 
+li.service_thumbnail_box .thumbnail_dimmed:after{
+ content: ''; 
+ display: block;
+ position: absolute;/*기준요소li.service_thumbnail_box*/
+ top:0px;left:0px;
+ width: 100%;
+ height: 100%;
+ background-color:rgba(20,20,20,0.5);
+ opacity: 0;
+ transition: 0.2s;
+ z-index: 10;
+}
+li.service_thumbnail_box:hover .thumbnail_dimmed:after{
+  opacity: 1;
+}
