@@ -682,3 +682,62 @@ background-size: 474px 1500px;
 .swiper-pagination-bullet:active {
   width: 40px;
 }
+
+/* content_service */
+.content_service{
+ 
+}
+.content_service .service_list_container{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+/* 단의 크기는 플렉스아이템 */
+.content_service li.service_thumbnail_box{
+  /* flex:0 1 33.33%; */
+  /* flex-basis: 33.33%; */
+  /* 플레스 아이템의 후손 크기가 플렉스 아이템보다 클경우 생각해서 width(flex-deirection:row_로지정, height(flex-deirection:column_로지정 */
+  width: 33.333%;
+  box-sizing: border-box;
+  background-color: #ccc;
+  border: #f00 1px solid;
+  overflow: hidden;
+}
+li.service_thumbnail_box a.thumbnail_dimmed{
+  position: relative;
+  color:#fff;
+  width: 100%;
+}
+li.service_thumbnail_box .thumbnail img{}
+li.service_thumbnail_box .description{
+  position: absolute;
+  bottom:-300px;left:0px;
+  padding:50px 30px 30px;
+  width: 100%; /* 부모가아닌 기준요소의 너비*/
+   /* background: no-repeat url(../img/main/play_circle.png) 30px 10px;*/
+  /*background: no-repeat url(../img/sprite.png) 
+  background-size: 30px 0px;*/
+  transition: bottom 0.2s;
+}
+li.service_thumbnail_box:hover .description{
+  bottom:0px;
+}
+
+li.service_thumbnail_box .description:after{
+  content: '';
+  display: block;
+  width:23px;height: 23px;  
+  background: no-repeat url(../img/sprite.png)-199px -129px;
+  position: absolute; 
+  /* .description이 기준요소*/
+  left:30px;top: 0px;
+
+}
+li.service_thumbnail_box .description .title_text{font-size: 28px;
+margin-bottom: 10px;}
+li.service_thumbnail_box .description .desc_text{font-size: 18px;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+
