@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>텍스트대신이미지표시</title>
+  <style>
+    /* 텍스트를 요소로 숨김 */
+    .visually-hidden {
+      position: absolute;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      white-spacing: nowrap;
+    }
+
+    .test {
+      /* 배경으로 사용할 이미지에 지정 */
+      width: 240px;
+      height: 70px;
+
+      box-sizing: border-box;
+      border: 1px solid #000;
+
+      background: no-repeat 0px 0px url(../test/logo.jpg);
+    }
+    /* 배경이미지 표시할 요소와 숨길 요소가 동일요소 */
+    .hide-text{
+      text-indent: 100%; /* 내어쓰기 */
+      overflow: hidden;
+      white-spacing: nowrap;/* 줄바꿈 방지 */
+    }
+  </style>
+</head>
+
+<body>
+  <h1>텍스트 대신 이미지 표시</h1>
+  <hr>
+  <h2>요소내 텍스트를 숨기고 이미지 표시</h2>
+  <p class="test hide-text">text
+  </p>
+  <hr>
+  <h2>숨길 텍스트를 span요소로 감싸서 숨기기(네이버회사소개)</h2>
+  <p class="test">
+    <span class="visually-hidden">text</span>
+  </p>
+  <hr>
+
+
+</body>
+
+</html>
