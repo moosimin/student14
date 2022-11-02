@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index-picture</title>
+</head>
+
+<body>
+  <h1>Picture 태그(img 1개와 같다)</h1>
+  <hr>
+  <p class="desc">
+    사진,이미지 등을 반응형으로 넣을 때 사용합니다.
+  </p>
+  <div class="picture-wrap">
+    <picture>
+      <source srcset="img/img_480x800.jpg" media="(max-width:576px)">
+      <source srcset="img/img_768x768.jpg" media="(max-width:768px)">
+      <source srcset="img/img_1920x810.jpg" media="(max-width:1200px)">
+      <img src="img/img_1920x810.jpg" alt="1920">
+    </picture>
+  </div>
+
+  <style>
+    * {
+      margin: 0 auto;
+    }
+
+    /*연습시만 여백조정하는거임*/
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      position: absolute;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    p.desc {
+      position: absolute;
+      top: 60px;
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* 가변이미지 일때
+    블럭요소를 부모로(너비지정) 자식은 img로(부모의 너비를 따르게 하라) */
+    .picture-wrap {
+      width: 100%;
+      /* 부모너비 다 사용*/
+      height: 100vh;
+      /* 브라우저 높이 다 사용*/
+    }
+
+    .picture-wrap picture img {
+      width: 100%;
+      /* 자신의 이미지보다 커지지 말아라 할때 함게 넣어라
+      max-width: 100%; */
+      height: 100%;
+      /* height:auto; 이미지 가로세로 비율을 유지하고 이미지 크기조절 */
+      object-fit: cover;
+      object-position: left center;
+      /* 오른쪽 끝을 자르고 위아래를 잘라서 안보이게*/
+    }
+  </style>
+</body>
+
+</html>
+

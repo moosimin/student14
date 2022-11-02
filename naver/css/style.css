@@ -231,7 +231,7 @@ footer {
 
 header .header_wrap,
 footer .footer_wrap {
-  max-width: 1600px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -847,17 +847,18 @@ li.support_list_box:nth-child(4) a:after {
 footer{
   padding-top:100px;
   padding-bottom: 100px;
+  background-color: #f8f8f8;
 }
 .footer_wrap {
   display: flex;
   position:relative;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .footer_wrap .flex_item {
  /* width: 25%;*/
-  box-sizing: border-box;
-  background-color: #fff;
-  border: 1px solid #000;
+  box-sizing: border-box;  
 }
 
 .footer_wrap .footer_logo {
@@ -890,20 +891,35 @@ background-color: #e5e5e5 ;
 }
 
 .footer_wrap .affiliate_box {
+  position: relative;
   order: 1;
   margin-left: auto;
-
 }
+
+.footer_wrap .affiliate_list {
+  display: none;
+  position: absolute;
+  width:200px;
+  left:-20px;bottom:-10px;
+  padding:1.5rem 1rem;
+  background-color: #fff;
+  border: 1px solid #999;
+}
+.footer_wrap .affiliate_item {
+  line-height: 1.5;
+}
+.footer_wrap .affiliate_item a{
+color:#999;font-size: 0.7rem;
+}
+.footer_wrap .affiliate_item a:hover{
+  color: var(--naver-color);
+}
+
+
 
 .footer_wrap .btn_affiliate {}
 
-.footer_wrap .affiliate_list {
- display: none;
-}
 
-.footer_wrap .affiliate_item {
-
-}
 
 .footer_wrap .footer_copy {
   position:absolute;
@@ -1013,4 +1029,29 @@ background-size: 474px 1500px;
 
 .swiper-pagination-bullet:active {
   width: 40px;
+}
+
+/* 반응형웹 설정 */
+/* desktop에서만 보이는 desktop-only */
+.desktop-only{display: block;}
+
+@media(max-width:1199.98px){
+  .desktop-only{display:none;}
+}
+/* 768px이하의 스크린에서 보일 내용 지정 */
+@media(max-width:767.98px){
+    header .header_wrap,
+    footer .footer_wrap {
+      max-width: none;
+      margin: 0 50px;
+    }
+}
+/* 1200px이하의 스크린에서 보일 내용 지정 */
+@media(max-width:1199.98px){
+header .header_wrap,
+footer .footer_wrap {
+  max-width: none;
+  margin: 0 50px;
+}
+
 }
