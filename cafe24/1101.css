@@ -1,0 +1,65 @@
+ul,ol,li{list-style: none;}
+*{margin: 0;padding: 0;font-family:"Noto Sans KR",'맑은 고딕',Dotum,"돋움",arial,verdana,sans-serif;}
+
+/* 메인 슬라이드 배너*/
+.StorageBox-Swiper { position:relative; overflow:hidden; margin:0 0 40px;}
+.StorageBox-Swiper .swiper-wrapper { display:flex; position:relative; width:100%; height:100%; }
+.StorageBox-Swiper .swiper-wrapper .swiper-slide { position:relative; flex-shrink:0; }
+.StorageBox-Swiper .swiperButton { position:absolute; top:50%; left:0; right:0; z-index:1; }
+.StorageBox-Swiper .swiperButton .swiper-button-next,
+.StorageBox-Swiper .swiperButton .swiper-button-prev { overflow:hidden; position:absolute; top:50%; width:32px; height:32px; font-size:1px; line-height:0; white-space:nowrap; text-indent:150%; transform:translateY(-50%); cursor:pointer; background:url('image/main/icon_banner.png') no-repeat; }
+.StorageBox-Swiper .swiperButton .swiper-button-next { right:24px; background-position-x:-50px; }
+.StorageBox-Swiper .swiperButton .swiper-button-prev { left:24px; background-position:0 0; }
+.StorageBox-Swiper .swiperCtrl { position:absolute; left:180px; bottom:42px; font-size:0; }
+.StorageBox-Swiper .swiperCtrl .swiper-pagination { display:inline-block; font-size:14px; line-height:24px; margin:0 12px 0 0; vertical-align:middle; }
+.StorageBox-Swiper .swiperCtrl .swiper-pagination .swiper-pagination-current { font-weight:bold; }
+.StorageBox-Swiper .swiperCtrl .swiper-button-ctrl { display:inline-block; width:24px; height:24px; cursor: pointer; background:url('image/main/icon_banner.png')0 -50px no-repeat; vertical-align:middle; }
+.StorageBox-Swiper .swiperCtrl .swiper-button-ctrl.pause { background-position-x:-50px; }
+.StorageBox-Swiper .banner { display:flex; justify-content:space-between; min-height:340px; padding:0 80px; box-sizing:border-box; background-repeat:no-repeat; background-position:center center; background-size:cover; }
+
+  .StorageBox-Swiper .banner.Minimal { background-image:url('image/main/1101-0.jpg'); }
+  .StorageBox-Swiper .banner.Montage { background-image:url('image/main/1102-0.jpg'); }
+  .StorageBox-Swiper .banner.Umbra { background-image:url('image/main/1103-0.jpg'); }
+ 
+
+.StorageBox-Swiper .info { padding:100px 0 80px 100px; letter-spacing:-1px; color:#1b1e26; }
+.StorageBox-Swiper .info .summary { display:inline-block; font-size:1.5rem; line-height:24px; font-weight:bold; }
+.StorageBox-Swiper .info strong.title { display:block; font-size:3rem; line-height:46px; }
+.StorageBox-Swiper .info .summary + .title { margin:4px 0 0; }
+.StorageBox-Swiper .info .desc { margin:12px 0 0; font-size:14px; line-height:20px; color:#444b59; }
+  html:lang(ja) .StorageBox-Swiper .info .desc { font-weight:100; }
+.StorageBox-Swiper .info .button { margin:24px 0 0; font-size:0; }
+.StorageBox-Swiper .info .button [class^="btn"] + [class^="btn"] { margin:0 0 0 12px; }
+
+.StorageBox-Swiper .btnBannerCtrl { display:inline-block; height:40px; padding:0 15px; border:1px solid transparent; box-sizing:border-box; border-radius:4px; font-size:14px; line-height:38px; color:#fff; text-align:center; vertical-align:middle; background-color:#444b59; }
+
+  .StorageBox-Swiper .btnBannerCtrl:hover { background-color:#667084; text-decoration:none; }
+  .StorageBox-Swiper .btnBannerCtrl.disabled,
+  .StorageBox-Swiper .btnBannerCtrl:disabled { background-color:#d6dae1; cursor:not-allowed; }
+  
+.StorageBox-Swiper .btnBannerNormal { display:inline-block; height:40px; padding:0 15px; border:1px solid #aeb4c6; box-sizing:border-box; border-radius:4px; font-size:14px; line-height:38px; color:#1B1E26; text-align:center; vertical-align:middle; background-color:#fff; }
+  .StorageBox-Swiper .btnBannerNormal:hover { background-color:#ececec; text-decoration:none; }
+  .StorageBox-Swiper .btnBannerNormal.disabled,
+  .StorageBox-Swiper .btnBannerNormal:disabled { border-color:#dcddd7; color:#dcddd7; background-color:#f0f0f0; cursor:not-allowed; }
+.StorageBox-Swiper [class^="btn"][target="_blank"] { position:relative; padding-right:35px; }
+.StorageBox-Swiper [class^="btn"][target="_blank"]:before { content:''; position:absolute; top:50%; right:13px; width:16px; height:16px; background:url('image/main/open_in_new.png') 0 0px no-repeat; transform:translateY(-50%); }
+.StorageBox-Swiper .swiperCtrl .swiper-button-ctrl{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(image/main/icon_banner.png)0 -50px no-repeat;
+  vertical-align: middle;
+}
+
+.StorageBox-Swiper .swiperCtrl .swiper-button-ctrl.pause{
+  background-position-x: -50px;
+}
+.StorageBox-Swiper .swiperCtrl .swiper-button-ctrl{
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(//img.echosting.cafe24.com/smartAdmin/img/design/sfix_design_banner.png)0 -50px no-repeat;
+  vertical-align: middle;
+}*/
